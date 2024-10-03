@@ -7,6 +7,7 @@ import './OrderEntry.css'; // Assuming styles are correct
 const OrderEntry = () => {
   const [layouts, setLayouts] = useState([]);
   const [selectedLayout, setSelectedLayout] = useState(null);
+  const [currentOrder, setCurrentOrder] = useState([]); // Store current order
   const navigate = useNavigate(); // useNavigate hook for redirecting
 
   // Fetch layouts from Firestore

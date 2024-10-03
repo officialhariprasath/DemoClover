@@ -1,55 +1,121 @@
 .menu-items-container {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .order-section {
-    flex: 1;
-    padding: 20px;
-  }
-  
-  .order-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-  }
-  
-  .food-items-section {
-    flex: 2;
-    padding: 20px;
-  }
-  
-  .food-items-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-  }
-  
-  .food-item {
-    padding: 20px;
-    border: 1px solid #ccc;
-    text-align: center;
-    cursor: pointer;
-  }
-  
-  .food-item img {
-    max-width: 100px;
-  }
-  
-  .actions-section {
-    flex: 0.5;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 20px;
-  }
-  
-  .action-btn {
-    padding: 15px;
-    margin: 10px 0;
-    background-color: #6a1b9a;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* Ensures vertical stacking */
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  max-width: 500px; /* Ensure order section stays at a fixed width */
+  margin-right: 20px;
+}
+
+/* Box containing Order for Table and Total */
+.order-summary-box {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px; /* Space between summary box and order list */
+}
+
+.order-list-box {
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ddddddad;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  height: 500px; /* Fixed height */
+  overflow-y: auto;
+}
+
+.order-list {
+  height: 100%;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.empty-order {
+  color: #999;
+  text-align: center;
+  padding: 20px;
+}
+
+.order-total {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.food-items-section {
+  flex: 2;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.food-items-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.food-item {
+  padding: 15px;
+  border: 1px solid #ccc;
+  text-align: center;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.food-item:hover {
+  transform: scale(1.05);
+}
+
+.food-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.actions-section {
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.action-btn {
+  padding: 15px;
+  margin: 10px 0;
+  background-color: #6a1b9a;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.action-btn:hover {
+  background-color: #432361;
+}

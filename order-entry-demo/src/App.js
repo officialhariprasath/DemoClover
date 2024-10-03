@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import TableManagement from './TableManagement';
 import OrderEntry from './OrderEntry';
 import AddItem from './AddItem';
-import MenuItems from './MenuItems'; // Import MenuItems component
+import MenuItems from './MenuItems';
+import PaymentPage from './PaymentPage'; // Import PaymentPage component
 
 function App() {
   return (
@@ -27,8 +28,9 @@ function App() {
           <Routes>
             <Route path="/table-management" element={<TableManagement />} />
             <Route path="/order-entry" element={<OrderEntry />} />
-            <Route path="/menuItems" element={<MenuItems />} /> {/* Ensure route for MenuItems */}
+            <Route path="/menuItems" element={<MenuItems />} />
             <Route path="/add-item" element={<AddItem />} />
+            <Route path="/payment" element={<PaymentPage />} /> {/* Add route for PaymentPage */}
           </Routes>
         </div>
       </div>
