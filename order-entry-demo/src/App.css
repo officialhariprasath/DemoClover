@@ -1,0 +1,209 @@
+/* Main container for the entire app */
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar navigation */
+.sidebar {
+  background-color: #f08080; /* Light pink */
+  padding: 10px;
+  width: 250px; /* Fixed width for the sidebar */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  display: block;
+  padding: 10px;
+  background-color: #d9534f; /* Darker pink */
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+}
+
+.sidebar ul li a:hover {
+  background-color: #c9302c;
+  color: white;
+}
+
+/* Main content area */
+.content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+/* Order Section Layout */
+.order-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.order-summary {
+  width: 40%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-items {
+  width: 55%;
+  padding: 20px;
+}
+
+.menu-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.menu-item {
+  width: 150px;
+  text-align: center;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.menu-item:hover {
+  transform: scale(1.05);
+}
+
+.menu-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.menu-item h3 {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.menu-item p {
+  font-size: 14px;
+  color: #333;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.action-buttons button {
+  padding: 10px 20px;
+  background-color: #5a2d82;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.action-buttons button:hover {
+  background-color: #432361;
+}
+
+/* Order Summary Styling */
+.order-summary ul {
+  list-style: none;
+  padding: 0;
+}
+
+.order-summary li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.order-summary li span {
+  font-size: 14px;
+}
+
+.order-summary h3 {
+  margin-top: 20px;
+  font-size: 18px;
+  text-align: right;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .sidebar ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .sidebar ul li {
+    flex-grow: 1;
+  }
+
+  .sidebar ul li a {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .order-section {
+    flex-direction: column;
+  }
+
+  .order-summary, .menu-items {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .tables-list {
+    padding: 20px;
+  }
+  
+  .table {
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    background-color: #f0f8ff;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+    transition: all 0.2s ease;
+  }
+  
+  .table:hover {
+    background-color: #add8e6;
+  }
+  
+  .selected-table-details {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fafafa;
+  }
+  
+}

@@ -1,0 +1,55 @@
+.menu-items-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .order-section {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .order-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  .food-items-section {
+    flex: 2;
+    padding: 20px;
+  }
+  
+  .food-items-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+  .food-item {
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .food-item img {
+    max-width: 100px;
+  }
+  
+  .actions-section {
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .action-btn {
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #6a1b9a;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
